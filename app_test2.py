@@ -878,7 +878,7 @@
 #     )
 
 #     st.title("💊 AI Smart Prescription Guide for Safer Healthcare")
-#     st.caption("Powered by Google Gemini — Fully AI-driven analysis, no hardcoded database")
+#     st.caption("Powered by Smart e")
 
 #     # --- Sidebar ---
 #     st.sidebar.header("⚙️ Settings & Features")
@@ -1613,7 +1613,7 @@ def main():
     )
 
     st.title("💊 AI Smart Prescription Guide for Safer Healthcare")
-    st.caption("Powered by Google Gemini — Fully AI-driven analysis, no hardcoded database")
+    st.caption("Powered by Smart Assistant chartbot")
 
     # --- Sidebar ---
     st.sidebar.header("⚙️ Settings & Features")
