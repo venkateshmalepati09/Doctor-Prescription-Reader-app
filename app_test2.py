@@ -1216,14 +1216,7 @@
 
 
 
-
-
-
-
-
-
 import os
-
 import streamlit as st
 import google.generativeai as genai
 from PIL import Image
@@ -1232,8 +1225,15 @@ from gtts import gTTS
 import base64
 import json
 from dotenv import load_dotenv
+
 load_dotenv()
+
 API_KEY = os.getenv("GEMINI_API_KEY")
+
+# ✅ Add this check
+if not API_KEY:
+    st.error("❌ GEMINI_API_KEY not found. Please set it in Streamlit Secrets.")
+    st.stop()
 
 try:
     genai.configure(api_key=API_KEY)
@@ -1241,6 +1241,30 @@ try:
 except Exception as e:
     st.error(f"Failed to configure Gemini API: {e}")
     st.stop()
+
+
+
+
+
+# import os
+
+# import streamlit as st
+# import google.generativeai as genai
+# from PIL import Image
+# import io
+# from gtts import gTTS
+# import base64
+# import json
+# from dotenv import load_dotenv
+# load_dotenv()
+# API_KEY = os.getenv("GEMINI_API_KEY")
+
+# try:
+#     genai.configure(api_key=API_KEY)
+#     model = genai.GenerativeModel("gemini-2.5-flash")
+# except Exception as e:
+#     st.error(f"Failed to configure Gemini API: {e}")
+#     st.stop()
 
 # --- Language Configuration ---
 LANG_OPTIONS = {
