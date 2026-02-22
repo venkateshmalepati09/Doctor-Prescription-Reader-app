@@ -1,6 +1,7 @@
 streamlit
-google-genai
+google-generativeai
 Pillow
 gTTS
 pandas
-google-generativeai
+python-dotenv
+
